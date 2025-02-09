@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBE77AA3-7B86-4F61-9670-5C13EADBFF68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Magic_Maths_Adventure</RootNamespace>
+    <AssemblyName>Magic Maths Adventure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Methods.cs" />
+    <Compile Include="Classes\MiniGames.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Questions.cs" />
+    <Compile Include="Classes\Validation.cs" />
+    <Compile Include="Forms\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDifficulty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDifficulty.Designer.cs">
+      <DependentUpon>frmDifficulty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFeedback.Designer.cs">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLeaderboards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLeaderboards.Designer.cs">
+      <DependentUpon>frmLeaderboards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLevel1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLevel1.Designer.cs">
+      <DependentUpon>frmLevel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLevel2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLevel2.Designer.cs">
+      <DependentUpon>frmLevel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLevel3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLevel3.Designer.cs">
+      <DependentUpon>frmLevel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoginRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoginRegister.Designer.cs">
+      <DependentUpon>frmLoginRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMiniGameSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMiniGameSelector.Designer.cs">
+      <DependentUpon>frmMiniGameSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPotionMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPotionMaker.Designer.cs">
+      <DependentUpon>frmPotionMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmShop.Designer.cs">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTrollBattle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTrollBattle.Designer.cs">
+      <DependentUpon>frmTrollBattle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVideo.Designer.cs">
+      <DependentUpon>frmVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDifficulty.resx">
+      <DependentUpon>frmDifficulty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFeedback.resx">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLeaderboards.resx">
+      <DependentUpon>frmLeaderboards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLevel1.resx">
+      <DependentUpon>frmLevel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLevel2.resx">
+      <DependentUpon>frmLevel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLevel3.resx">
+      <DependentUpon>frmLevel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLoginRegister.resx">
+      <DependentUpon>frmLoginRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMiniGameSelector.resx">
+      <DependentUpon>frmMiniGameSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPotionMaker.resx">
+      <DependentUpon>frmPotionMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmShop.resx">
+      <DependentUpon>frmShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTrollBattle.resx">
+      <DependentUpon>frmTrollBattle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVideo.resx">
+      <DependentUpon>frmVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Splash\GoodWizard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Splash\GoodWizard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Splash\GoodWizard3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Splash\GoodWizard4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Splash\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\HelpWizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\PasswordVisible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\PasswordInvisible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\arrowLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\arrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Male Head Ginger Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Male Head Brown Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Male Head Blonde Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Female Head Brown Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Female Head Ginger Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Blonde Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Male Body Earth Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Male Body Fire Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Male Body Water Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Female Body Earth Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Female Body Fire Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\LoginReg\Wizard Female Body Water Finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Level 1\GorlockAlive.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Level 1\HeartAlive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Level 1\HeartDead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Level 1\HintButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Level2\EvilDwarf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Level2\Fireball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Level2\Mudball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Level2\Waterball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\Hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\StaffTilted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\Staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\Cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\Runes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\Belt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Shop\Shoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Messenger\CloseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Leaderboards\Crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Menu\MusicOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Menu\MusicOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\OgreBattle\Ogre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\Leaderboards\LeftPointerFinished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\OgreBattle\PromotionalPhotoOgre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\PotionMaker\CauldronFilled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\PotionMaker\EmptyCauldron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\PotionMaker\HorizontalPotion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\PotionMaker\VerticalPotion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Photos\PotionMaker\PotionScreen.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
